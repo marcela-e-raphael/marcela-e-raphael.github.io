@@ -56,6 +56,15 @@ h3 {
 
 .section {
     padding: 60px 0;
+    position: relative;
+
+    &__title {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
 
     &--no-padding {
         padding: 0;
