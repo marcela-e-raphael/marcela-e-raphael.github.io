@@ -20,10 +20,10 @@
     <section class="section">
         <div class="container">
             <div class="row">
-                <div class="col-xs-5">
+                <div class="col-lg-5">
                     
                 </div>
-                <div class="col-xs-7">
+                <div class="col-lg-7">
                     <h2>Nossa história</h2>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -39,19 +39,19 @@
     <section class="section section-bg--black">
         <div class="container">
             <div class="row text--center">
-                <div class="col-xs-4">
+                <div class="col-lg-4">
                     <h3>Onde?</h3>
                     <p class="text--large">Oitava Igreja Presbiteriana de Belo Horizonte</p>
                     <p class="text--large">Rua Nestor Soares de Melo, 15, <br>
                     Palmares, Belo Horizonte, MG, Brasil</p>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-lg-4">
                     <h3>Quando?</h3>
                     <p class="text--large">Sábado,<br>
                     13 de junho de 2015,<br>
                     às 20h00</p>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-lg-4">
                     <h3>RSVP</h3>
                 </div>
             </div>
@@ -59,8 +59,8 @@
     </section>
 
     <section class="section section--no-padding">
-        <div class="container">
-            <iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Oitava%20Igreja%20Presbiteriana%20de%20Belo%20Horizonte%20-%20Rua%20Nestor%20Soares%20de%20Melo%2C%20Palmares%2C%20Belo%20Horizonte%20-%20State%20of%20Minas%20Gerais%2C%20Brazil&key=AIzaSyCi21HehWT8SewsuY2PMV3POJCUWtgPra4"></iframe>
+        <div id="map" class="container">
+            <iframe id="map__iframe" class="map--scrolloff" width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Oitava%20Igreja%20Presbiteriana%20de%20Belo%20Horizonte%20-%20Rua%20Nestor%20Soares%20de%20Melo%2C%20Palmares%2C%20Belo%20Horizonte%20-%20State%20of%20Minas%20Gerais%2C%20Brazil&key=AIzaSyCi21HehWT8SewsuY2PMV3POJCUWtgPra4"></iframe>
         </div>
     </section>
 
@@ -68,15 +68,15 @@
         <div class="container text--center">
             <p>Aqui você ecnontra os links para nossas listas de presentes, fique à vontade!</p>
             <div class="row">
-                <div class="col-xs-4">
+                <div class="col-lg-4">
                     <h2>TOK&STOK</h2>
                     <a class="link--store" target="_blank" href="https://www.tokstok.com.br/lic/convidados/default.jsf?idLista=230601">&gt;&gt;</a>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-lg-4">
                     <h2>Ricardo Eletro</h2>
                     <a class="link--store" target="_blank" href="http://www.ricardoeletro.com.br/ListaCasamento/ListaPresentes/65777/Raphael-e-Marcela">&gt;&gt;</a>
                 </div>
-                <div class="col-xs-4">
+                <div class="col-lg-4">
                     <h2>FastShop</h2>
                     <a class="link--store" target="_blank" href="http://listadecasamento.fastshop.com.br/ListaCasamento/ListaCasamentoProdutos.aspx?ID=177938">&gt;&gt;</a>
                 </div>
@@ -91,5 +91,18 @@
             </form>
         </div>
     </section>
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script>
+        $(function() {
+            $('#map').on('click', function() {
+                console.log($('#map__iframe'));
+                $('#map__iframe').removeClass('map--scrolloff');
+            });
+
+            $('#map__iframe').mouseleave(function() {
+                $('#map__iframe').addClass('map--scrolloff');
+            });
+        });
+    </script>
   </body>
 </html>

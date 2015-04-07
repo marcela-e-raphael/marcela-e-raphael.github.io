@@ -48,6 +48,12 @@ h3 {
     }
 }
 
+#map {
+    .map--scrolloff {
+        pointer-events: none;
+    }
+}
+
 .section {
     padding: 60px 0;
 
