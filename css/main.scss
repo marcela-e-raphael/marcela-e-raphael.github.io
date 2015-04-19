@@ -8,10 +8,21 @@
 
 $black: #333;
 $gray: #999;
+$light-gray: #E6E6E6;
 $white: #fff;
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 html, body {
     font-family: 'Ubuntu', sans-serif;
+    height: 100%;
 }
 
 hr {
@@ -38,6 +49,41 @@ h3 {
     font-size: 30px;
 }
 
+header {
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+
+    ul {
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px 0;
+        list-style: none;
+        display: table;
+
+        > li {
+            display: table-cell;
+            text-align: center;
+            font-size: 18px;
+            text-transform: uppercase;
+
+            a {
+                color: white;
+
+                &:hover {
+                    color: white;
+                    text-decoration: none;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
 .link {
     &--store {
         text-decoration: none;
@@ -55,6 +101,8 @@ h3 {
 }
 
 #map {
+    // height: 100%;
+
     .map--scrolloff {
         pointer-events: none;
     }
@@ -63,13 +111,13 @@ h3 {
 .section {
     padding: 60px 0;
     position: relative;
+    display: table;
+    height: 100%;
+    width: 100%;
 
-    &__title {
-        position: absolute;
-        top: 20px;
-        right: 0;
-        left: 0;
-        margin: auto;
+    .container {
+        display: table-cell;
+        vertical-align: middle;
     }
 
     &--no-padding {
@@ -81,6 +129,10 @@ h3 {
     		background-color: $black;
     		color: $white;
     	}
+
+        &--light-gray {
+            background-color: $light-gray;
+        }
 
     	&--gray {
     		background-color: $gray;
