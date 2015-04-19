@@ -5,7 +5,6 @@
 
 @import url(http://fonts.googleapis.com/css?family=Ubuntu|Droid+Serif:700italic);
 
-
 $black: #333;
 $gray: #999;
 $light-gray: #E6E6E6;
@@ -108,9 +107,30 @@ header {
 
 #map {
     padding-top: 45px;
+    position: relative;
+}
 
-    .map--scrolloff {
+.map {
+    &--scrolloff {
         pointer-events: none;
+    }
+
+    &--reload {
+        vertical-align: middle;
+        cursor: pointer;
+        color: white;
+        padding: 15px;
+        display: inline-block;
+        background-color: rgba(0,0,0,0.7);
+        position: absolute;
+        bottom: 20px;
+        right: 50px;
+        border-radius: 4px;
+        z-index: 999999;
+
+        &:hover {
+            color: rgba(255,255,255,0.7);
+        }
     }
 }
 
