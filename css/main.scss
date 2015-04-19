@@ -69,7 +69,7 @@ header {
             text-align: center;
             font-size: 18px;
             text-transform: uppercase;
-            width: 20%;
+            width: 16.666666666666%;
 
             a {
                 color: white;
@@ -135,15 +135,19 @@ header {
 }
 
 .section {
-    padding: 60px 0;
     position: relative;
-    display: table;
     height: 100%;
     width: 100%;
 
     .container {
-        display: table-cell;
-        vertical-align: middle;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        height: 100%;
+        display: table;
+        .content {
+            display: table-cell;
+            vertical-align: middle;
+        }
     }
 
     &--no-padding {

@@ -12,10 +12,6 @@ $(document).ready(function() {
     frame.src = 'https://www.google.com/maps/embed/v1/place?q=Oitava%20Igreja%20Presbiteriana%20de%20Belo%20Horizonte%20-%20Rua%20Nestor%20Soares%20de%20Melo%2C%20Palmares%2C%20Belo%20Horizonte%20-%20State%20of%20Minas%20Gerais%2C%20Brazil&key=AIzaSyCi21HehWT8SewsuY2PMV3POJCUWtgPra4';
   };
 
-  var reloadMap = function(frame) {
-    frame.src = frame.src;
-  };
-
   $(window).on('resize', function() {
     var height = $(this).innerHeight();
     applyHeightToMap(height);
@@ -45,7 +41,7 @@ $(document).ready(function() {
   });
 
   $('.map--reload').click(function() {
-    reloadMap(mapiFrame[0]);
+    loadMap(mapiFrame[0]);
   });
 
 
